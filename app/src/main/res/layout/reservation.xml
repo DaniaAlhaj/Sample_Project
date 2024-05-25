@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".reservation">
+
+    <ImageView
+        android:id="@+id/my_image_view"
+        android:layout_width="171dp"
+        android:layout_height="136dp"
+        android:contentDescription="Image Description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/booking"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginTop="80dp" />
+
+    <!-- Start Reservation Row -->
+    <TextView
+        android:id="@+id/start_reservation_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="8dp"
+        android:padding="8dp"
+        android:text="start reservation"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/start_reservation_input"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_image_view" />
+
+    <EditText
+        android:id="@+id/start_reservation_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="calendar"
+        android:padding="8dp"
+        app:layout_constraintStart_toEndOf="@id/start_reservation_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_image_view"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- End Reservation Row -->
+    <TextView
+        android:id="@+id/end_reservation_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="end reservation"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/end_reservation_input"
+        app:layout_constraintTop_toBottomOf="@+id/start_reservation_label"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+       />
+
+    <EditText
+        android:id="@+id/end_reservation_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="calendar"
+        android:padding="8dp"
+        app:layout_constraintStart_toEndOf="@id/end_reservation_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start_reservation_input"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Change Location Row -->
+    <TextView
+        android:id="@+id/change_location_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="change location"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/change_location_input"
+        app:layout_constraintTop_toBottomOf="@+id/end_reservation_label"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+      />
+
+    <EditText
+        android:id="@+id/change_location_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="location"
+        android:padding="8dp"
+        app:layout_constraintStart_toEndOf="@id/change_location_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/end_reservation_input"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Total Price Label -->
+    <TextView
+        android:id="@+id/total_price_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="total price"
+        android:textSize="20sp"
+        android:textColor="@color/purble"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/change_location_input"
+        android:layout_marginTop="45dp" />
+
+    <!-- Add to Cart Button -->
+    <Button
+        android:id="@+id/add_to_cart_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/purble"
+        android:text="Add to cart reservation"
+        android:textColor="#ffff"
+        android:textStyle="bold"
+        android:textSize="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/total_price_label"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
